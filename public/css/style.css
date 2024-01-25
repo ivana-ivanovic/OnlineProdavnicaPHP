@@ -1,0 +1,412 @@
+body {
+	font-size:12px;
+	background: #ffffff;
+	font-family: Arial;
+	overflow: auto;
+}
+
+.sadrzajliste {
+    position: absolute;
+    display: none;
+	font-size: 0.5em;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 33%;
+    color: white;
+    text-align: center;
+    font-size: 4em;
+    cursor: pointer;
+    
+}
+.search{
+    margin-top: 0em;
+    display: inline-block;
+}
+.search form button , .search form input{
+    float: right;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    
+}
+.container {
+    width: 100%;
+    margin: 0px;
+    padding-left: 13em;
+    padding-top: 3em;
+}
+
+#menu5 div, #menu4 div, #home div {
+    display: table-cell;
+    padding-right: 3em;
+    
+}
+.tab-pane table td a {
+    margin-right: 3em;
+}
+.tab-pane table td {
+    padding: 0.5em;
+    text-align: center;
+    font-size: 0.8em;
+    align-content: flex-start;
+}
+.tab-pane input {
+    display: block;
+    margin: 0.4em;
+}
+.item-change-align{
+    text-align: left;
+}
+.textarea_add_item {
+    display: block;
+    resize: none;
+}
+
+.image2x3 img {
+    width: 3em;
+}
+.order_margin{
+    border: 1px solid black;
+}
+a:focus, a:hover {
+    color: rgb(167, 0, 4);
+}
+
+.dropdown:hover .sadrzajliste {
+	display: block;
+    width: 100%;
+   	background-color: white;
+	border: 0.25em solid rgb(167, 0, 4);
+}
+.zene:hover .sadrzajliste {
+	background-image: url("public/images/zene.jpg");
+	background-size: contain;
+	background-position-x: left;
+	background-repeat: no-repeat;
+}
+
+.muskarci:hover .sadrzajliste {
+	background-image: url("public/images/muskarci.jpg");
+    background-repeat: no-repeat;
+	background-position-x: right;
+	background-size: contain;
+	
+}
+
+.deca:hover .sadrzajliste {
+	background-image: url("public/images/deca.jpg");
+    background-size: contain;
+	background-repeat: no-repeat;
+	background-position-x: right;
+}
+
+.registracija {
+	font-size: 1em;
+	color: black;
+	font-family: Arial;
+	float: right;
+	margin-left: 1em;
+}
+header {
+	height: 13em;
+        background-color: rgb(167, 0, 4);
+	display: flex;
+}
+.padajuceliste {
+    float: unset;
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+}
+.korpa {
+  float: right;
+}
+.korpa img {
+  height: 30px;
+}
+
+.logo {
+  background-color: white;
+  float: left;
+  height: 100%;
+}
+.logo img {
+	height: 13em;
+}
+.foother {
+    margin-top: 2em;
+    width: 100%;
+    background-color: rgb(167, 0, 4);
+    display: inline-block;
+    height: 15em;
+}
+.drustvenemreze {
+	width: 60%;
+	float: left;
+	text-align: center;
+	margin-top: 8em;
+}
+.kontakt {
+	float: left;
+	width: 40%;
+	text-align: center;
+	margin-top: 7em;
+	font-size: 1.2em;
+}
+.drustvenemreze img {
+    width: 3%;
+}
+.kontakt a {
+	font-family: Arial;
+	color: white;
+}
+.strana div img {
+    width: 100%;
+}
+.strana div {
+	width: 50%; 
+	float: left;
+}
+
+.strana {
+	width:100%;
+	margin-bottom: 10px;
+}
+.glavni {
+	width:100%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+.glavni table {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	
+}
+
+.glavni table tr {
+	width: 33%;
+}
+
+.glavni table img, .glavni table td {
+  width: 30%;
+}
+
+register, login {
+	display: block;
+	font-size: 1.5em;
+	color: black;
+	padding-left: 13em;
+}
+register label, register button, login label, login button  {
+	display: block;
+}
+
+register input, login input {
+	height: 2em;
+	width: 30%;
+}
+register button, login button {
+	font-size:1em;
+}
+login a {
+    padding-bottom: 2em;
+}
+
+
+
+
+.kontaktstrana h1 {
+	font-size: 3em;
+}
+.kontaktstrana {
+	width: 100%;
+	color: rgb(167, 0, 4);
+	margin-left: 13em;
+}
+.kontaktstrana form label, .kontaktstrana form button {
+	display: block;
+	font-size: 1.5em;
+}
+.kontaktstrana form input, .kontaktstrana form textarea{
+	width: 30%;
+	
+}
+.kontaktstrana form input {
+	height:2em;
+}
+.kontaktstrana form textarea {
+	height:5em;
+	resize: none;
+}
+.drustvenemreze a {
+	padding-left: 30px;
+}
+.linija {
+	height: 2em;
+}
+.linija a {
+    padding-left: 1em;
+    padding-right: 0.5em;
+}
+a {
+	color: rgb(167, 0, 4);
+}
+a:link {
+    text-decoration: none;
+}
+.opisproizvoda{
+	margin-right:25%;
+	margin-top:1em;
+	border-style:double;
+}
+.majca table {
+	width: 100%;
+}
+.majca img {
+	margin: 10%;
+	width: 50%;
+}
+.majca td {
+	width: 50%
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 10em;
+  margin: 1em;
+  text-align: center;
+  font-family: arial;
+  display: inline-table;
+}
+
+
+.price {
+  color: grey;
+  font-size: 1em;
+}
+.card p {
+    font-size: 12px;
+}
+
+
+.breadcrumb {
+	font-size: 1.7em;
+	width: 100%;
+	display: inline;
+}
+.breadcrumb li {
+	display: inline;
+	margin-left: 1em;
+}
+.breadcrumb ul {
+	margin-top: 1em;
+}
+.levo {
+	text-align: left;
+	padding-left: 20%;
+}
+cart table {
+    padding-left: 13em;
+}
+cart table tr td img{
+	width: 5em;
+}
+cart table tr td p{
+	display: inline;
+}
+cart button {
+    padding: 0.2em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    margin-left: 5em;
+}
+.suma {
+    width: 80%;
+    border-top: 3px solid black;
+    font-size: 2em;
+    margin-left: 2em;
+}
+
+
+#myImg:hover {opacity: 0.7;}
+
+
+.modal {
+  display: none;
+  position: fixed; 
+  
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+
+@media screen and (max-width: 800px) {
+  body { 
+	font-size: 8px;
+}
+  table td {
+	font-size: 8px;
+  }
+

@@ -1,0 +1,2 @@
+ErrorDocument 403 /index.php?stranica=greska404
+ErrorDocument 404 /index.php?stranica=greska404
