@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2020 at 05:46 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Jan 26, 2024 at 10:36 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -125,9 +124,9 @@ CREATE TABLE `item_size` (
 
 INSERT INTO `item_size` (`id_item_size`, `id_item`, `id_size`, `on_stock`) VALUES
 (1, 1, 1, 99),
-(2, 1, 2, 100),
+(2, 1, 2, 99),
 (3, 1, 3, 100),
-(4, 1, 4, 100),
+(4, 1, 4, 99),
 (5, 1, 5, 99),
 (11, 3, 1, 98),
 (12, 3, 2, 100),
@@ -148,7 +147,7 @@ INSERT INTO `item_size` (`id_item_size`, `id_item`, `id_size`, `on_stock`) VALUE
 (27, 6, 2, 100),
 (28, 6, 3, 97),
 (29, 6, 4, 100),
-(30, 6, 5, 100),
+(30, 6, 5, 98),
 (31, 1, 6, 99),
 (33, 3, 6, 100),
 (34, 4, 6, 100),
@@ -213,7 +212,7 @@ INSERT INTO `item_size` (`id_item_size`, `id_item`, `id_size`, `on_stock`) VALUE
 (141, 25, 3, 99),
 (142, 25, 4, 100),
 (143, 25, 5, 97),
-(144, 25, 6, 100),
+(144, 25, 6, 99),
 (145, 26, 1, 100),
 (146, 26, 2, 100),
 (147, 26, 3, 100),
@@ -282,7 +281,10 @@ INSERT INTO `orders` (`id_orders`, `for_payment`, `id_user`, `time`, `date`) VAL
 (62, '800.00', 1, '11:43:09', '2020-11-19'),
 (63, '800.00', 1, '11:49:28', '2020-11-19'),
 (64, '800.00', 1, '11:51:31', '2020-11-19'),
-(65, '800.00', 1, '12:32:46', '2020-11-19');
+(65, '800.00', 1, '12:32:46', '2020-11-19'),
+(66, '800.00', 6, '06:06:14', '2023-08-11'),
+(67, '800.00', 6, '01:09:55', '2023-11-01'),
+(68, '2401.00', 6, '10:10:17', '2024-01-26');
 
 -- --------------------------------------------------------
 
@@ -375,7 +377,11 @@ INSERT INTO `orders_item` (`id_orders_item`, `id_orders`, `id_item`, `amount_on_
 (96, 62, 3, 1, '800.00'),
 (97, 63, 5, 1, '800.00'),
 (98, 64, 3, 1, '800.00'),
-(99, 65, 14, 1, '800.00');
+(99, 65, 14, 1, '800.00'),
+(100, 66, 1, 1, '800.00'),
+(101, 67, 1, 1, '800.00'),
+(102, 68, 6, 2, '1401.00'),
+(103, 68, 25, 1, '1000.00');
 
 -- --------------------------------------------------------
 
@@ -398,7 +404,7 @@ CREATE TABLE `sale` (
 INSERT INTO `sale` (`id_sale`, `name`, `description`, `image`, `active`) VALUES
 (1, 'Jesenja akcija majici', 'Majice na popustu 30%', '1sale.jpg', '1'),
 (2, 'Jesenja akcija majici', 'Majice na popustu 30%', '1sale.jpg', '1'),
-(3, 'Jesenja akcija majici', 'Majice na popustu 30%', '1sale.jpg', '0'),
+(3, 'Jesenja akcija majici', 'Majice na popustu 30%', '1sale.jpg', '1'),
 (4, 'Jesenja akcija majici', 'Majice na popustu 30%', '1sale.jpg', '0'),
 (7, 'Snizenje dukserica', 'Opis', '7sale.jpg', '1');
 
@@ -743,7 +749,34 @@ INSERT INTO `session` (`id_session`, `session_id_number`, `id_user`, `id_item`, 
 (316, 'cfr1v8v5g2rrhu7f1drk5dl728', 3, 3, '17:17:50', '2020-11-19', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0', '127.0.0.1'),
 (317, 'cfr1v8v5g2rrhu7f1drk5dl728', 3, 25, '17:18:17', '2020-11-19', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0', '127.0.0.1'),
 (318, 'cfr1v8v5g2rrhu7f1drk5dl728', 3, 1, '17:20:26', '2020-11-19', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0', '127.0.0.1'),
-(319, 'cfr1v8v5g2rrhu7f1drk5dl728', 3, 1, '17:44:59', '2020-11-19', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0', '127.0.0.1');
+(319, 'cfr1v8v5g2rrhu7f1drk5dl728', 3, 1, '17:44:59', '2020-11-19', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0', '127.0.0.1'),
+(320, '28qh0elgnjd1g3t8i5oj1a83rl', NULL, 1, '01:24:13', '2021-08-13', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0', '127.0.0.1'),
+(321, '28qh0elgnjd1g3t8i5oj1a83rl', NULL, 1, '01:24:21', '2021-08-13', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0', '127.0.0.1'),
+(322, 'iq1h43jshviubslmonpt2psm8k', NULL, 1, '05:51:58', '2023-08-11', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0', '127.0.0.1'),
+(323, 'iq1h43jshviubslmonpt2psm8k', NULL, 22, '05:52:46', '2023-08-11', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0', '127.0.0.1'),
+(324, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '05:59:14', '2023-08-11', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0', '127.0.0.1'),
+(325, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '05:59:33', '2023-08-11', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0', '127.0.0.1'),
+(326, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '06:05:52', '2023-08-11', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0', '127.0.0.1'),
+(327, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '06:05:57', '2023-08-11', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0', '127.0.0.1'),
+(328, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '06:34:54', '2023-08-11', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0', '127.0.0.1'),
+(329, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '01:09:22', '2023-11-01', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0', '127.0.0.1'),
+(330, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '01:09:26', '2023-11-01', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0', '127.0.0.1'),
+(331, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '23:19:40', '2024-01-25', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(332, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '23:20:11', '2024-01-25', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(333, 'iq1h43jshviubslmonpt2psm8k', 6, 20, '23:20:24', '2024-01-25', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(334, 'iq1h43jshviubslmonpt2psm8k', 6, 23, '23:20:28', '2024-01-25', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(335, 'iq1h43jshviubslmonpt2psm8k', 6, 22, '23:20:34', '2024-01-25', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(336, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '23:20:37', '2024-01-25', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(337, 'iq1h43jshviubslmonpt2psm8k', 6, 4, '23:20:41', '2024-01-25', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(338, 'iq1h43jshviubslmonpt2psm8k', 6, 1, '09:07:08', '2024-01-26', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(339, 'iq1h43jshviubslmonpt2psm8k', 6, 6, '10:07:28', '2024-01-26', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(340, 'iq1h43jshviubslmonpt2psm8k', 6, 6, '10:07:32', '2024-01-26', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(341, 'iq1h43jshviubslmonpt2psm8k', 6, 25, '10:07:39', '2024-01-26', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(342, 'iq1h43jshviubslmonpt2psm8k', 6, 25, '10:07:43', '2024-01-26', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(343, 'iq1h43jshviubslmonpt2psm8k', 6, 6, '10:08:19', '2024-01-26', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(344, 'iq1h43jshviubslmonpt2psm8k', 6, 6, '10:08:24', '2024-01-26', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(345, 'iq1h43jshviubslmonpt2psm8k', NULL, 6, '10:14:16', '2024-01-26', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1'),
+(346, 'iq1h43jshviubslmonpt2psm8k', NULL, 6, '10:14:21', '2024-01-26', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0', '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -828,7 +861,8 @@ INSERT INTO `user` (`id_user`, `firstname`, `lastname`, `username`, `email`, `pa
 (2, 'Filip', 'Otovic', 'filip', 'filip.otovic.18@singimail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'user'),
 (3, 'Ivana', 'Jevtic', 'admin1', 'ivana.ivanovic.18@singimail.com', '21232f297a57a5a743894a0e4a801fc3', 'admin'),
 (4, 'Filip', 'Otovic', 'admin2', 'filip.otovic.18@singimail.com', '21232f297a57a5a743894a0e4a801fc3', 'admin'),
-(5, 'Petar', 'Petrovic', 'petar', 'petar@p.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin');
+(5, 'Petar', 'Petrovic', 'petar', 'petar@p.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin'),
+(6, 'a', 'aaa', 'aaaa', 'a@a.a', '74b87337454200d4d33f80c4663dc5e5', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -945,13 +979,13 @@ ALTER TABLE `item_size`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id_orders` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id_orders` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT for table `orders_item`
 --
 ALTER TABLE `orders_item`
-  MODIFY `id_orders_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id_orders_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT for table `sale`
@@ -963,7 +997,7 @@ ALTER TABLE `sale`
 -- AUTO_INCREMENT for table `session`
 --
 ALTER TABLE `session`
-  MODIFY `id_session` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=320;
+  MODIFY `id_session` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=347;
 
 --
 -- AUTO_INCREMENT for table `size`
@@ -981,7 +1015,7 @@ ALTER TABLE `type_item`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
